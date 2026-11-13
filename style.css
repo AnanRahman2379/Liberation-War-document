@@ -1,0 +1,323 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+
+.container{
+    max-width: 1240px;
+    padding: 0px 10px;
+    margin: 0 auto;
+}
+
+/*menu start*/
+.menu{
+    background-color: rgb(180, 48, 48);
+    box-sizing: border-box;
+}
+.menu li{
+    list-style:none;
+}
+.menu .left h3{
+    display: inline-block;
+    margin-left: 10px;
+    color: rgb(0, 0, 0);
+}
+.menu li:last-child{
+    margin-right: 0px;
+}
+.menu .right a{
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+    font-size: 15px;
+    font-weight: 600;
+}
+.menu .main-collumn{
+    display: grid;
+    grid-template-columns: 2fr 5fr ;
+    align-items: center;
+}
+
+.menu .right{
+    text-align: right;
+
+}
+
+.menu .left img {
+    display: inline-block;
+         
+    height: 80px;      
+    object-fit: contain; 
+}
+.menu li {
+    list-style: none;
+    display: inline-block;
+    margin-right: 25px;
+    transition: .4s;
+    padding: 20px 10px;
+}
+
+.menu li:hover {
+    background: gray;
+}
+
+.menu li:last-child {
+    margin-right: 0;
+}
+
+.menu li a {
+    position: relative;
+}
+
+.menu li a::after {
+    content: '';
+    position: absolute;
+    height: 2px;
+    background: #000;
+    bottom: -36px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 0;
+    transition: .4s;
+}
+
+.menu li:hover a::after {
+    width: calc(100% + 20px);
+}
+
+
+
+/*banner start*/
+.banner {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+}
+
+.banner .img {
+    width: 100%;
+    display: block;
+    position: relative;
+    z-index: 1; /* ইমেজ নিচে থাকবে */
+}
+
+.banner .collumn {
+    position: absolute;
+    top: 50%;
+    left: 5%; /* বাম দিক থেকে মার্জিন */
+    transform: translateY(-50%);
+    z-index: 2; /* কন্টেন্ট ও বাটন উপরে থাকবে যাতে সঠিকভাবে ক্লিক করা যায় */
+    width: 90%;
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+}
+
+.banner .left .content h4 {
+    display: inline-block;
+    padding: 8px 15px;
+    color: azure;
+    background-color: #820000;
+    border-radius: 15px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-weight: 300;
+    font-size: 20px;
+}
+
+.banner .left .content h1 {
+    font-family: 'Inter', 'Poppins', sans-serif; 
+    font-size: 64px;         
+    font-weight: 700;       
+    color: darkred;          
+    line-height: 1.15;       
+    letter-spacing: -1px;  
+    text-transform: uppercase; 
+    background-color: rgba(255, 0, 0, 0.20); 
+    border-radius: 15px;
+    padding: 10px;
+}
+
+.banner .left .content h1 span {
+    color: #fbf8f8;          
+}
+
+.banner .left .content .btn {
+    display: flex;          
+    justify-content: flex-start; 
+    align-items: center;     
+    gap: 15px;              
+    margin-top: 25px;
+}
+
+.banner .left .content a {
+    display: inline-block; /* ইনলাইন ব্লকের কারণে শুধু লেখার জায়গায় ক্লিক পড়বে এবং পাশাপাশি থাকবে */
+    text-decoration: none;
+    padding: 15px 25px;
+    color: aliceblue;
+    background-color: #0a3801;
+    border-radius: 20px;
+    font-size: large;
+    transition: background-color 0.3s ease;
+}
+
+.banner .left .content a:hover {
+    background-color: #0d4a02; /* হোভার ইফেক্ট (ঐচ্ছিক) */
+}
+
+/*document*/
+.documnet{
+    background-color: 	#dadada;
+}
+.documnet h2 {
+    text-align: center;         
+    color: #198754;             
+    font-weight: 600;           
+    letter-spacing: 1px;      
+    margin: 20px 0;       
+}
+
+
+/*interview*/
+.interviews-section {
+    background-color: rgba(255, 99, 71, 0.2);
+    font-family: 'Inter', 'Poppins', sans-serif;
+    width: 100%;
+}
+
+.badge-tag {
+    display: inline-block;
+    padding: 6px 14px;
+    background-color: #820000; /* আপনার ব্যানারের লাল রঙ */
+    color: azure;
+    border-radius: 15px;
+    font-size: 13px;
+    font-weight: 600;
+    letter-spacing: 1px;
+}
+
+.section-title {
+    font-size: 42px;
+    font-weight: 700;
+    color: darkred;
+    text-transform: uppercase;
+    letter-spacing: -0.5px;
+}
+
+.section-title span {
+    color: #0a3801; 
+}
+
+.section-subtitle {
+    max-width: 650px;
+    font-size: 16px;
+}
+
+.interview-card {
+    background: #ffffff;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+    border: 1px solid rgba(130, 0, 0, 0.15);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.interview-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 30px rgba(130, 0, 0, 0.15);
+}
+
+.media-wrapper {
+    position: relative;
+    background-color: #000;
+    height: 210px;
+    overflow: hidden;
+}
+
+.media-wrapper video,
+.media-wrapper .img-cover {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.media-type-badge {
+    position: absolute;
+    top: 12px;
+    right: 12px;
+    padding: 4px 10px;
+    font-size: 11px;
+    font-weight: 700;
+    border-radius: 8px;
+    color: #fff;
+    letter-spacing: 0.5px;
+}
+
+.video-badge {
+    background-color: #820000;
+}
+
+.audio-badge {
+    background-color: #0a3801;
+}
+
+.bio-header {
+    border-bottom: 2px solid rgba(130, 0, 0, 0.1);
+    padding-bottom: 10px;
+}
+
+.interviewee-name {
+    font-size: 20px;
+    font-weight: 700;
+    color: #1a1a1a;
+}
+
+.bio-meta {
+    font-size: 13px;
+    color: #820000;
+}
+
+.testimony-box {
+    background-color: rgba(255, 0, 0, 0.04); /* হালকা লালচে আভা */
+    padding: 12px;
+    border-left: 3px solid #820000;
+    border-radius: 0 8px 8px 0;
+}
+
+.summary-label {
+    font-size: 13px;
+    font-weight: 700;
+    color: #0a3801;
+    margin-bottom: 5px;
+}
+
+.summary-text {
+    font-size: 14px;
+    color: #444;
+    line-height: 1.5;
+}
+
+.audio-player-box audio {
+    height: 36px;
+    border-radius: 20px;
+}
+
+.btn-custom-green {
+    display: inline-block;
+    text-decoration: none;
+    padding: 12px 20px;
+    color: aliceblue;
+    background-color: #0a3801;
+    border-radius: 15px;
+    font-size: 15px;
+    font-weight: 500;
+    transition: background-color 0.3s ease;
+}
+
+.btn-custom-green:hover {
+    background-color: #820000; 
+    color: #fff;
+}
+
+
+/*contact*/
+.contact-section{
+    background-color: rgba(255, 99, 71, 0.2);
+}
